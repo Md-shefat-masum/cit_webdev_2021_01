@@ -1,0 +1,423 @@
+/* header part start */
+#header {
+    background-color: var(--brand1);
+}
+
+#header .left_p {
+    color: var(--white);
+    line-height: 40px;
+}
+
+#header .right_links {
+    /* border: 1px solid red; */
+    display: inline-flex;
+}
+
+#header .right_links li a {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--white);
+    padding: 9px;
+}
+
+#header .right_links li a:hover {
+    color: var(--black);
+}
+
+/* header part end */
+/* nav part start */
+#nav {
+    padding: 10px 0px;
+}
+
+#nav .logo {
+    height: 40px;
+}
+
+#nav .nav_links {
+    display: inline-flex;
+}
+
+#nav .nav_links a:hover {
+    color: var(--brand1);
+}
+
+#nav .nav_links a {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--black);
+    font-family: 'myrid-pro-regular';
+    padding: 10px 6px;
+    /* border: 1px solid red; */
+}
+
+/* nav part end */
+/* banner part start*/
+#banner {
+    /* border: var(--border); */
+    background-image: url('../images/banner.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#banner .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 80px 0px;
+}
+
+#banner .banner_content {
+    text-align: right;
+}
+
+#banner .banner_content h2 {
+    color: var(--white);
+    font-size: 30px;
+    font-family: "oswald-regular";
+    margin-bottom: 13px;
+    text-transform: uppercase;
+}
+
+#banner .banner_content h1 {
+    color: var(--white);
+    font-size: 40px;
+    font-family: "oswald-bold";
+    margin-bottom: 19px;
+    text-transform: uppercase;
+}
+
+#banner .banner_content p {
+    color: var(--white);
+    margin-bottom: 28px;
+}
+
+#banner .banner_content .btns {
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+#banner .banner_content .btns a {
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "oswald-regular";
+    padding: 10px 20px;
+    border: 1px solid var(--white);
+    margin-left: 20px;
+}
+
+#banner .banner_content .btns a:hover {
+    background-color: var(--brand1);
+    border: 1px solid var(--brand1);
+}
+
+/* banner part end*/
+
+/* heading part start */
+.common_heading {
+    text-align: center;
+}
+
+.common_heading h2 {
+    font-size: 24px;
+    line-height: 24px;
+    color: var(--black);
+    font-weight: 500;
+    font-family: "oswald-bold";
+    text-align: center;
+    /* border: var(--border); */
+    padding: 5px 0px;
+    display: inline-block;
+    position: relative;
+}
+
+.common_heading h2::before {
+    position: absolute;
+    content: '';
+    background-image: url('../images/under-line.png');
+    height: 4px;
+    width: 100%;
+    background-repeat: no-repeat;
+    left: 0;
+    bottom: 0;
+}
+
+/* heading part end */
+/* about us part start */
+#aboutus {
+    padding: 55px 0px;
+}
+
+#aboutus .common_heading {
+    margin-bottom: 40px;
+}
+
+/* #aboutus .left_img {} */
+
+#aboutus .left_img img {
+    width: 100%;
+}
+
+#aboutus .right_content {
+    height: 100%;
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#aboutus .right_content p {
+    font-size: 13px;
+    line-height: 24px;
+    margin: 15px 0px;
+}
+
+/* about us part end */
+
+/* service start  */
+#service {
+    padding-bottom: 30px;
+}
+
+#service .common_heading {
+    margin-bottom: 30px;
+}
+
+#service .service_body {
+    /* border: var(--border); */
+
+}
+
+#service .service_body:hover {
+    cursor: pointer;
+
+}
+
+#service .service_body .top {
+    /* border: var(--border); */
+    position: relative;
+    height: 50px;
+}
+
+#service .service_body .top .icon {
+    /* border: var(--border); */
+    height: 83px;
+    width: 83px;
+    border-radius: 50%;
+    border: 4px solid white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#service .service_body:hover .top .icon .borders {
+    border: 2px solid var(--brand2);
+    transition: all linear .3s;
+}
+
+#service .service_body:hover .top .icon .borders .inner_border {
+    background-color: var(--brand2);
+    transition: all linear .3s;
+}
+
+#service .service_body .top .icon .borders {
+    border: 2px solid #f1f1f1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+#service .service_body .top .icon .borders .inner_border {
+    border: 2px solid var(--white);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #f1f1f1;
+}
+
+#service .service_body .top .icon img {
+    height: 40px;
+}
+
+#service .service_body .bottom {
+    /* border: var(--border); */
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 14px;
+    padding-top: 50px;
+    transition: all linear .3s;
+}
+
+#service .service_body .bottom:hover {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+}
+
+#service .service_body .bottom h4 {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--black);
+    font-weight: 500;
+    font-family: "oswald-bold";
+    margin-bottom: 10px;
+}
+
+#service .service_body .bottom p {
+    font-size: 13px;
+    line-height: 24px;
+    text-align: justify;
+}
+
+/* service end */
+
+/* gallery part start */
+#portfolio {
+    padding: 30px 0px;
+}
+
+#portfolio .common_heading {
+    margin-bottom: 30px;
+}
+
+#portfolio .image_body {
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+#portfolio .image_body .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    left: -100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all linear .3s;
+}
+
+#portfolio .image_body:hover .overlay {
+    opacity: 1;
+    visibility: visible;
+    left: 0;
+}
+
+#portfolio .image_body .overlay a {
+    height: 40px;
+    width: 40px;
+    background: var(--brand1);
+    color: white;
+    line-height: 40px;
+    text-align: center;
+}
+
+#portfolio .image_body .overlay a i {}
+
+#portfolio .image_body img {
+    width: 100%
+}
+
+/* gallery part end */
+
+/* team part start */
+#team {
+    padding: 30px 0px;
+}
+
+#team .common_heading {
+    margin-bottom: 30px;
+}
+
+/* #team .team_body {} */
+
+#team .team_body .top {
+    position: relative;
+    overflow: hidden;
+    transition: all linear .3s;
+}
+
+#team .team_body .top .overlay {
+    position: absolute;
+    width: 80px;
+    background-color: rgba(0, 0, 0, .5);
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    right: -100%;
+    transition: all linear .3s;
+}
+
+#team .team_body:hover .top .overlay {
+    opacity: 1;
+    visibility: visible;
+    right: 0;
+}
+
+#team .team_body:hover .top {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+
+}
+
+#team .team_body:hover .bottom h4 {
+    color: var(--brand1);
+}
+
+#team .team_body .top .overlay ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    text-align: center;
+}
+
+/* #team .team_body .top .overlay ul li{} */
+#team .team_body .top .overlay ul li a {
+    color: white;
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    line-height: 40px;
+    margin: 12px 0px;
+}
+
+#team .team_body .top .overlay ul li a:hover {
+    background-color: var(--brand1);
+}
+
+/* #team .team_body .top .overlay ul li a i{} */
+
+#team .team_body .top img {
+    width: 100%
+}
+
+#team .team_body .bottom {
+    text-align: center;
+}
+
+#team .team_body .bottom h4 {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--black);
+    font-weight: 500;
+    font-family: "oswald-bold";
+    transition: all linear .3s;
+}
+
+#team .team_body .bottom h5 {
+    font-size: 14px;
+    line-height: 24px;
+    color: #555555;
+    font-weight: 400;
+    font-family: "oswald-bold";
+}
+
+/* team part end */

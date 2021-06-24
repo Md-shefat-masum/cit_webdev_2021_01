@@ -1,0 +1,37 @@
+:root {
+    --pg: #555555;
+    --brand1: #0872b9;
+    --brand2: #5bc5f4;
+    --white: #ffffff;
+    --black: #353535;
+    --border: 1px solid red;
+}
+
+@font-face {
+    font-family: 'opens-sans-regular';
+    src: url('../fonts/Open_Sans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'oswald-bold';
+    src: url('../fonts/Oswald/static/Oswald-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'oswald-regular';
+    src: url('../fonts/Oswald/static/Oswald-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'myrid-pro-regular';
+    src: url('../fonts/myriad-pro-cufonfonts/MYRIADPRO-REGULAR.OTF');
+}
+
+
+p {
+    font-size: 13px;
+    line-height: 24px;
+    color: var(--pg);
+    font-weight: 400;
+    font-family: "opens-sans-regular";
+}
