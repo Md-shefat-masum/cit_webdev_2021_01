@@ -5,6 +5,7 @@
     --white: #ffffff;
     --black: #353535;
     --border: 1px solid red;
+    --tr: all linear .3s;
 }
 
 @font-face {
