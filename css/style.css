@@ -26,6 +26,10 @@
 
 /* header part end */
 /* nav part start */
+#nav_close,
+#nav_trigger{
+    display: none;
+}
 #nav {
     padding: 10px 0px;
 }
@@ -632,3 +636,4 @@ footer .four li img {
     color: var(--brand1);
 }
 /* footer part end */
+

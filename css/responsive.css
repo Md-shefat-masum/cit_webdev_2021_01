@@ -1,0 +1,69 @@
+/* // X-Small devices (portrait phones, less than 576px) */
+@media screen and (max-width: 575.98px) { 
+    #header .left_p {
+        text-align: center;
+    }
+    #header .right_links {
+        display: flex;
+        justify-content: center;
+    }
+    #banner .banner_content {
+        text-align: center;
+    }
+    #banner .banner_content h1 {
+        font-size: 30px;
+    }
+    #service .service_body {
+        margin-bottom: 30px;
+    }
+    .team_body{
+        margin-bottom: 30px;
+    }
+    .tetimonial_body{
+        margin-bottom: 30px;
+    }
+
+    #footer .two{
+        margin-bottom: 30px;
+    }
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    #service .service_body {
+        margin-bottom: 30px;
+    }
+    .team_body{
+        margin-bottom: 30px;
+    }
+    #footer .two{
+        margin-bottom: 30px;
+    }
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) { 
+    #footer .two{
+        margin-bottom: 30px;
+    }
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {  
+    .container{
+        width: 992px;
+    }
+}
+
+/* // X-Large devices (large desktops, less than 1400px) */
+@media (min-width: 1200px) and (max-width: 1399.98px) { 
+    .container{
+        width: 992px;
+    }
+}
+
+@media (min-width: 1400px) { 
+    .container{
+        width: 992px;
+    }
+}
