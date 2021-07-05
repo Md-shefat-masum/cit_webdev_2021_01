@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+ 
 </head>
 
 <body>
@@ -440,6 +441,34 @@
         </div>
     </section>
 
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="card form_body">
+                        <div class="card-body">
+                            <form action="#" name="datas">
+                                <h5>calculator</h5>
+                                <input type="number" name="number1" placeholder="give number one...">
+                                <input type="number" name="number2" placeholder="give number two...">
+                                <button type="button" onclick="calculates(+datas.number1.value , +datas.number2.value)"> submit </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card form_body">
+                        <div class="card-body">
+                            <h5>Result</h5>
+                            <ul id="myList">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer id="footer">
         <div class="container footer_top_padding">
             <div class="row">
@@ -526,6 +555,8 @@
     </footer>
 
     <script src="js/custom.js"></script>
+    <script src="js/learn.js"></script>
+
 </body>
 
 </html>
