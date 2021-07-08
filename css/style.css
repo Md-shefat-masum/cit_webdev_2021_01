@@ -664,3 +664,19 @@ footer .four li img {
     color: var(--white);
 }
 
+#grade_body{
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 30px;
+}
+#grade_body li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+#grade_body li input{
+    width: 50%;
+}
