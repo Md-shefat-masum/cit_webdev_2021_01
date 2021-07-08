@@ -138,3 +138,10 @@ function calculates(num1, num2) {
 
 // calculate(30, 20);
 // calculate(60, 20);
+
+const return_string = (params) => {
+    console.log(params);
+    return params;
+}
+
+
