@@ -1,0 +1,42 @@
+.grade_form {
+    background: black;
+    color: white;
+}
+
+.grade_form ul {
+    padding: 20px 10px;
+}
+
+.grade_form ul li {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.grade_form ul li input {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 75%;
+    box-sizing: border-box;
+}
+
+.button_design {
+    padding: 10px 35px;
+    color: white;
+    background: rgb(10, 13, 120);
+    background: linear-gradient(90deg, rgba(10, 13, 120, 1) 12%, rgba(35, 89, 99, 1) 89%);
+    border-radius: 25px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+#results{
+    padding: 5px;
+    border: 1px solid gray;
+    margin-top: 20px;
+}
+#results li{
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
