@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile apps</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="fonts/fontawesome/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="css/moblile_view.css">
+    <link rel="stylesheet" href="css/grade.css">
+</head>
+
+<body>
+    <main class="main_body">
+        <div class="top">
+            <div class="top_content">
+                <div class="left">
+                    <a href="#">
+                        <i class="fas fa-align-left"></i>
+                    </a>
+                </div>
+                <div class="mid">
+                    <form action="#">
+                        <input type="text" placeholder="search">
+                        <button type="button"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="right">
+                    <img src="images/avatar.jfif" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="app_content_body">
+                <div class="app_content">
+
+                    <div class="card m-2">
+                        <div class="card-body">
+                            <form action="" name="attendance_form">
+                                <div class="form-group mb-4">
+                                    <label for="" class="form-label">Date</label>
+                                    <input type="date" name="date" class="form-control">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <label for="" class="form-label">Name</label>
+                                    <input type="text" name="name" class="form-control">
+                                </div>
+                                <div class="form-group mb-4">
+                                    <button type="button"
+                                        onclick="save_data(attendance_form.date.value, attendance_form.name.value)"
+                                        class="btn btn-outline-success">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3 mx-2">
+                        <div class="card-body">
+                            <form action="" name="search_form">
+                                <input type="text" name="search_key" onkeyup="search(search_form.search_key.value)" placeholder="search" class="form-control">
+                            </form>
+
+                            <ul class="list-group mt-4" id="attandance_list">
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <ul class="nav_links">
+                <li>
+                    <a href="#" class="nav_items">
+                        <i class="fas fa-baseball-ball"></i>
+                        <span>games</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav_items">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>earnings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active nav_items">
+                        <i class="fas fa-home"></i>
+                        <span>home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav_items">
+                        <i class="fas fa-car"></i>
+                        <span>cars</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav_items">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="js/array.js"></script>
+
+</body>
+
+</html>
