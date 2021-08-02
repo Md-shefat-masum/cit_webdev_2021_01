@@ -37,7 +37,7 @@
             <div class="app_content_body">
                 <div class="app_content">
 
-                    <div class="card m-2">
+                    <!-- <div class="card m-2">
                         <div class="card-body">
                             <form action="" name="attendance_form">
                                 <div class="form-group mb-4">
@@ -67,8 +67,43 @@
 
                             </ul>
                         </div>
+                    </div> -->
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h6>student info</h6>
+                            <form action="" name="info_form">
+                                <label for="" class="mt-3">name</label>
+                                <input type="text" name="name" class="form-control my-1">
+
+                                <label for="" class="mt-3">roll</label>
+                                <input type="text" name="roll" class="form-control my-1">
+
+                                <label for="" class="mt-3">subject</label>
+                                <input type="text" name="subject" class="form-control my-1">
+
+                                <button type="button" id="save_info" class="btn btn-info mt-4">Submit</button>
+                            </form>
+                        </div>
                     </div>
 
+                    <div class="card mt-4">
+                        <div class="card-header">
+                            <h1 id="count">0</h1>
+                        </div>
+                        <div class="card-body">
+                            <table id="info_table" class="table text-center table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Roll</th>
+                                        <th>Sub</th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
