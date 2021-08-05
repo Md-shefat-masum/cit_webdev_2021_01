@@ -35,7 +35,7 @@
         <div class="content">
             <div class="app_content_body">
                 <div class="app_content">
-                    <form action="" class="grade_form" name="grader_form">
+                    <!-- <form action="" class="grade_form" name="grader_form">
                         <ul>
                             <li>
                                 <label for="bangla">bangla</label>
@@ -60,7 +60,79 @@
                             </li>
                         </ul>
 
-                    </form>
+                    </form> -->
+                    <style>
+                        .color_red {
+                            color: red;
+                        }
+
+                        .color_blue {
+                            color: blue;
+                        }
+
+                        .color_green {
+                            color: green;
+                        }
+
+                        .active {
+                            color: rgba(60, 0, 255, 0.993);
+                        }
+                    </style>
+
+                    <h1 id="heading" data-s_name="mr.ratul" data-roll="04" data-roll2="04" data-roll3="04"
+                        data-class_name="class ten" class="heading color_red">
+                        Mr.Ratul
+                    </h1>
+                    <h1 id="heading" data-s_name="mr.ratul" data-roll="04" data-roll2="04" data-roll3="04"
+                        data-class_name="class ten" class="heading color_red">
+                        Mr.Ratul
+                    </h1>
+                    <h1 id="heading" data-s_name="mr.ratul" data-roll="04" data-roll2="04" data-roll3="04"
+                        data-class_name="class ten" class="heading color_red">
+                        Mr.Ratul
+                    </h1>
+
+                    <button id="color_btn">change color</button>
+
+                    <script>
+                        let heading = document.getElementsByClassName('heading');
+                        console.log(heading);
+                        // console.log(heading[0].classList);
+                        // console.log(heading[0].classList.toggle('color_blue'));
+                        // console.log(heading[0].classList.add('color_green'));
+                        // console.log(heading[0].classList.remove('color_green'));
+
+                        // let attr = heading[0].attributes;
+                        // console.log(attr);
+                        // for (let index = 0; index < attr.length; index++) {
+                        //     const element = attr[index];
+                        //     console.log(element.value);
+                        // }
+
+                        // let dataset = heading[0].dataset;
+                        // console.log(dataset.s_name);
+                        // let test = document.querySelector('.heading');
+                        // console.log(test);
+                        window.a_myname = 'shefat';
+                        window.a_show_my_name = (name) => 'my name is : ' + name;
+                        
+                        document.getElementById('color_btn')
+                            .addEventListener('click', function (e) {
+                                e.preventDefault();
+                                console.log(e);
+                                heading[0].classList.toggle('active')
+                            })
+
+
+                        // heading[0].style.textAlign = 'center';
+                        // heading[0].setAttribute("style",
+                        //         `
+                        //             background-color: black;
+                        //             font-size: 30px;
+                        //             text-align: center;
+                        //         `
+                        //     );
+                    </script>
 
                     <ul id="results">
                     </ul>
@@ -103,7 +175,7 @@
         </div>
     </main>
 
-    <script>
+    <!-- <script>
         const show_grade = (subject , message) =>{
             var node = document.createElement("LI"); // Create a <li> node
             var textnode = document.createTextNode(subject+' : '+message); // Create a text node
@@ -154,7 +226,7 @@
             calculate_grade('english', english);
             calculate_grade('math', math);
         }
-    </script>
+    </script> -->
 
 </body>
 
