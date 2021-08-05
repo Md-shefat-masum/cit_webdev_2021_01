@@ -282,7 +282,43 @@ let student_iformation = {
 
 // console.log(teacher1, teacher2);
 
+
+
+function render_student_information_list() {
+
+    let tbody = document.querySelector('#info_table tbody');
+    tbody.innerHTML = '';
+
+    student_information_list = JSON.parse(localStorage.getItem('student_information_list'));
+    document.getElementById('count').innerHTML = student_information_list.length;
+
+    // for (let index = 0; index < student_information_list.length; index++) {
+    //     const element = student_information_list[index];
+    //     console.log(element);
+
+    // }
+
+    student_information_list.forEach((element) => {
+        // console.log(element);
+        let tr = '';
+        tr += `
+            <tr>
+                <td>${element.name}</td>
+                <td>${element.roll}</td>
+                <td>${element.subjectname}</td>
+            </tr>
+        `;
+
+        tbody.innerHTML += tr;
+    });
+
+
+}
+
 let student_information_list = [];
+if (localStorage.getItem('student_information_list')) {
+    render_student_information_list();
+}
 
 // for (let index = 0; index < 10; index++) {
 //     const element = 10;
@@ -321,17 +357,22 @@ document.getElementById('save_info')
         }
 
         student_information_list.push(student_info);
-        document.getElementById('count').innerHTML = student_information_list.length;
-        
-        let tr = '';
-        tr += `
-            <tr>
-                <td>${name}</td>
-                <td>${roll}</td>
-                <td>${subjectname}</td>
-            </tr>
-        `;
+        localStorage.setItem('student_information_list', JSON.stringify(student_information_list));
 
-        let tbody = document.querySelector('#info_table tbody');
-        tbody.innerHTML += tr;
+        render_student_information_list();
     })
+
+let heading = document.getElementsByClassName('student');
+console.log( 
+    heading, 
+    // heading[0].attributes,
+    // heading[0].innerHTML = "<br>hahahahah</br>", 
+    // "",
+    // heading[0].innerText = " tor bell nai", 
+    // "",
+    heading[0].classList,
+    heading[0].classList.contains('hmm_bujci_nai') ,
+    heading[0].classList.add('hmm_bujci_nai') ,
+    heading[0].classList,
+
+);
