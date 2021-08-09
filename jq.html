@@ -59,6 +59,174 @@
         </div>
     </header>
 
+    <section style="padding: 30px 0px;">
+        <style>
+            .btn {
+                background-color: brown;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 5px;
+                border: 0;
+                margin-bottom: 20px;
+            }
+
+            .output {
+                padding: 5px;
+                border-radius: 5px;
+                width: 50%;
+                margin: 10px 0px;
+                border: 1px solid gray;
+                display: block;
+            }
+        </style>
+        <div class="container">
+
+            <form action="" id="j_form">
+                <button class="btn" id="remote_click">remote click</button>
+                <button class="btn" id="action_btn">
+                    click me
+                    <span style="color: yellow; font-weight: 800;"> arrow</span>
+                </button>
+                <input class="output output_input" id="output_input" type="text">
+
+                <button id="select_all">select all</button>
+                <button id="unselect_all">remove all</button>
+                <label for="">
+                    <input type="checkbox">
+                    check
+                </label>
+                <label for="">
+                    <input type="checkbox">
+                    check
+                </label>
+                <label for="">
+                    <input type="checkbox">
+                    check
+                </label>
+                <label for="">
+                    <input type="checkbox">
+                    check
+                </label>
+            </form>
+            <p class="output outputp" name="outputp">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, quia? Minus maiores veritatis
+                mollitia voluptatibus obcaecati accusantium numquam cum vel itaque quae ut sint pariatur unde, similique
+                ratione aspernatur optio!
+            </p>
+            <ul class="list_items">
+                <li>one</li>
+                <li>two</li>
+                <li>three</li>
+            </ul>
+        </div>
+        <script>
+            // let action_btn = document.getElementById('action_btn');
+            // action_btn.addEventListener('click',function(){
+            //     console.log('i am clicked');
+            // });
+
+            $('p[name="outputp"]').css({
+                "background-color": "yellow",
+                "font-weight": "bolder"
+            });
+
+            // $('#select_all').on('click',function(){
+            //     console.log(
+            //         $('input[type="checkbox"]').addClass('output'),
+
+            //         $('input[type="checkbox"]').prop('type','text')
+            //     );
+            // })
+            // $('#unselect_all').on('click',function(){
+            //     console.log(
+            //         $('input[type="checkbox"]').prop('checked',false)
+            //     );
+            // })
+
+            $(function () {
+                console.log($('#action_btn'));
+
+                $('#remote_click').on('click', function (e) {
+                    e.preventDefault();
+                    // $('#action_btn').trigger('click');
+                    // $('#output_input').trigger('focus');
+
+                    // $('.list_items').prepend(
+                    //     `<li>hi i am a new child</li>`
+                    // );
+
+                    // init_li();
+
+                    // $('.list_items').hide();
+
+                    // console.log( $(this).height(48) );
+                    // console.log( $(this).width(128) );
+
+                    $.get('https://jsonplaceholder.typicode.com/users', function (res) {
+                        // console.log(res);
+                        res.forEach(element => {
+                            $('.list_items').prepend(
+                                `<li>${element.name}</li>`
+                            );
+                        });
+                    })
+
+                })
+
+                function init_li() {
+                    $('.list_items li').off().on('click', function () {
+                        // $(this).remove();
+                        // console.log('removed');
+                        // console.log($(this).parents('section').css('background','red'));
+                    });
+                }
+
+                init_li();
+
+
+                $('#action_btn').on('click', function () {
+                    console.log('i am clicked');
+                });
+
+                $('#action_btn').on('mouseover', function () {
+                    console.log('i am clicked 2 ');
+                    console.log('i am clicked 2 ');
+                    console.log('i am clicked 2 ');
+                });
+
+                $('#action_btn').off().on('click', function () {
+                    console.log('i am clicked 3');
+                    console.log('i am clicked 3');
+                    console.log('i am clicked 3');
+                    console.log('i am clicked 3');
+                });
+
+                $('#j_form').on('submit', function (e) {
+                    e.preventDefault();
+                    // console.log('form submit');
+                })
+
+                $('.output_input').on('focus', function (e) {
+                    // console.log(e.target.value);
+                    console.log($(this).val('asjflasdjf'));
+                    $(this).select()
+                    document.execCommand('copy')
+                    // $('.outputp').html( $(this).val() );
+
+                    console.log('focus');
+
+                })
+
+                // $('#action_btn span').on('mouseover', function () {
+                //     console.log('i am arrow');
+                //     $('.output').val('i am arrow');
+
+                //     $('.outputp').html('i am arrow');
+                // })
+            })
+        </script>
+    </section>
+
     <nav id="nav">
         <div class="container">
             <div class="row">
