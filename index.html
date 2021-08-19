@@ -12,14 +12,24 @@
     <link rel="stylesheet"
         href="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.css">
 
-
-
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+
+    <!-- plugins -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/magnify.css">
+
+    <!-- theme css -->
     <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- js plugin -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- <script src="js/jquery-3.6.0.min.js"></script> -->
 
@@ -46,6 +56,10 @@
         https://md-shefat-masum.github.io/cit_webdev_2021_01/
     
     -->
+
+    <div id="loader_body" class="loader_body">
+        <div class="loader"></div>
+    </div>
 
     <header id="header">
         <div class="container">
@@ -219,29 +233,55 @@
         </div>
     </section>
 
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="images/banner.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="images/banner.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-                <img src="images/banner.jpg" class="d-block w-100" alt="...">
+    <section>
+        <div class="container">
+            <div class="slide_test_1">
+                <div class="">
+                    <img data-lazy="images/banner.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="">
+                    <img data-lazy="images/banner.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="">
+                    <img data-lazy="images/banner.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="">
+                    <img data-lazy="images/banner.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="">
+                    <img data-lazy="https://thumbs.dreamstime.com/b/hourglass-time-banner-background-format-wood-54533019.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="">
+                    <img class="w-100" data-lazy="https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?size=626&ext=jpg" alt="" srcset="">
+                </div>
             </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="banner owl-carousel owl-theme">
+                <div class="">
+                    <img src="images/banner.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="">
+                    <img src="images/banner.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="">
+                    <img src="images/banner.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="">
+                    <img src="images/banner.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="">
+                    <img src="https://thumbs.dreamstime.com/b/hourglass-time-banner-background-format-wood-54533019.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="">
+                    <img class="w-100" src="https://img.freepik.com/free-vector/abstract-website-banner-with-modern-shapes_1361-1738.jpg?size=626&ext=jpg" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section id="aboutus">
         <div class="container">
@@ -375,7 +415,7 @@
                 <div class="col-4 col-xs-12">
                     <div class="image_body">
                         <div class="overlay">
-                            <a href="#">
+                            <a class="test-popup-link" href="images/firstrow-up.png">
                                 <i class="fa fa-search"></i>
                             </a>
                         </div>
@@ -383,7 +423,7 @@
                     </div>
                     <div class="image_body">
                         <div class="overlay">
-                            <a href="#">
+                            <a class="test-popup-link" href="images/firstrow-bottom.png">
                                 <i class="fa fa-search"></i>
                             </a>
                         </div>
@@ -393,7 +433,7 @@
                 <div class="col-4 col-xs-12">
                     <div class="image_body">
                         <div class="overlay">
-                            <a href="#">
+                            <a class="test-popup-link" href="images/secondrow-up.png">
                                 <i class="fa fa-search"></i>
                             </a>
                         </div>
@@ -401,7 +441,7 @@
                     </div>
                     <div class="image_body">
                         <div class="overlay">
-                            <a href="#">
+                            <a class="test-popup-link" href="images/secondrow-bottom.png">
                                 <i class="fa fa-search"></i>
                             </a>
                         </div>
@@ -411,7 +451,7 @@
                 <div class="col-4 col-xs-12">
                     <div class="image_body">
                         <div class="overlay">
-                            <a href="#">
+                            <a class="test-popup-link" href="images/thirdrow-up.png">
                                 <i class="fa fa-search"></i>
                             </a>
                         </div>
@@ -419,7 +459,8 @@
                     </div>
                     <div class="image_body">
                         <div class="overlay">
-                            <a href="#">
+                            
+                            <a class="test-popup-link" href="images/thirdrow-bottom.png">
                                 <i class="fa fa-search"></i>
                             </a>
                         </div>
@@ -430,7 +471,7 @@
         </div>
     </section>
 
-    <section id="team">
+    <section id="team" class="" >
         <div class="container">
             <div class="row">
                 <div class="col-12">
@@ -439,8 +480,8 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-3 col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="team_slide owl-carousel owl-theme">
+                <div class=" wow slideInLeft" data-wow-duration="2s" data-wow-delay="2s">
                     <div class="team_body">
                         <div class="top">
                             <div class="overlay">
@@ -459,7 +500,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3 col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class=" wow flipInX" data-wow-iteration="10" data-wow-duration="2s" data-wow-delay="2s">
                     <div class="team_body">
                         <div class="top">
                             <div class="overlay">
@@ -478,7 +519,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3 col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class=" wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="2s">
                     <div class="team_body">
                         <div class="top">
                             <div class="overlay">
@@ -497,7 +538,45 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-3 col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class=" wow slideInRight" data-wow-duration="2s" data-wow-delay="2s">
+                    <div class="team_body">
+                        <div class="top">
+                            <div class="overlay">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                            <img src="images/memberpic1.png" alt="">
+                        </div>
+                        <div class="bottom">
+                            <h4>Sajal Sarder</h4>
+                            <h5>Web Designer</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow slideInRight" data-wow-duration="2s" data-wow-delay="2s">
+                    <div class="team_body">
+                        <div class="top">
+                            <div class="overlay">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                                </ul>
+                            </div>
+                            <img src="images/memberpic1.png" alt="">
+                        </div>
+                        <div class="bottom">
+                            <h4>Sajal Sarder</h4>
+                            <h5>Web Designer</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class=" wow slideInRight" data-wow-duration="2s" data-wow-delay="2s">
                     <div class="team_body">
                         <div class="top">
                             <div class="overlay">
@@ -650,13 +729,13 @@
                 </div>
                 <div class="col-4 col-xs-6 col-sm-6 col-md-6 col-lg-3">
                     <h3 class="four_h3">Flikr Photo</h3>
-                    <ul class="four">
-                        <li><img src="images/flikr1.png" alt="img"></li>
-                        <li><img src="images/flikr2.png" alt="img"></li>
-                        <li><img src="images/flikr3.png" alt="img"></li>
-                        <li><img src="images/flikr4.png" alt="img"></li>
-                        <li><img src="images/flikr5.png" alt="img"></li>
-                        <li><img src="images/flikr6.png" alt="img"></li>
+                    <ul class="four fimages">
+                        <li><img href="images/flikr1.png" src="images/flikr1.png" alt="img"></li>
+                        <li><img href="images/flikr2.png" src="images/flikr2.png" alt="img"></li>
+                        <li><img href="images/flikr3.png" src="images/flikr3.png" alt="img"></li>
+                        <li><img href="images/flikr4.png" src="images/flikr4.png" alt="img"></li>
+                        <li><img href="images/flikr5.png" src="images/flikr5.png" alt="img"></li>
+                        <li><img href="images/flikr6.png" src="images/flikr6.png" alt="img"></li>
                     </ul>
                 </div>
             </div>
@@ -672,9 +751,17 @@
         </section>
     </footer>
 
+    <!-- bootstrap js -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- At the end of <body>, after jQuery and the Bootstrap js -->
     <script src="https://unpkg.com/@bootstrapstudio/bootstrap-better-nav/dist/bootstrap-better-nav.min.js"></script>
+
+    <!-- plugins -->
+    <script src="js/slick.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/magnifi.js"></script>
+
+    <!-- theme js -->
     <script src="js/custom.js"></script>
 
 </body>
