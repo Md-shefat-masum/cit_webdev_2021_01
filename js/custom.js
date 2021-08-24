@@ -78,7 +78,7 @@ $(function () {
         loop: true,
         margin: 10,
         nav: true,
-        autoplay: true,
+        autoplay: false,
         animateOut: 'rotateIn',
         animateIn: 'rotateInDownRight',
         responsive: {
@@ -94,10 +94,29 @@ $(function () {
         }
     });
 
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function () {
         this.document.getElementById('loader_body').classList.add('loader_hide')
     })
-    
+
+    $('.team_body h4').on('click', function () {
+        let description = $(this).data('description');
+        let roll = $(this).data('roll');
+        let name = $(this).data('name');
+        let class_name = $(this).data('class');
+        let image = $(this).data('image');
+
+        $('.team_bio_name').text(name);
+        $('.team_details').text(description);
+        $('.team_image').attr('src', image);
+
+        console.log({
+            description,
+            roll,
+            name,
+            class_name,
+        });
+    })
+
     // $(window).on('load',function(){
     //     $('.loader_body').fadeOut();
     // })
@@ -134,3 +153,53 @@ $(function () {
     })
     wow.init();
 })
+
+var app = new Vue({
+    el: '#testimonial',
+    data: function(){
+        return {
+            section_title: 'Hello from testimonial',
+            my_name: 'al amin hossain',
+            test_image: 'http://127.0.0.1:5500/images/flikr3.png',
+            students: [
+                {
+                    image: 'images/flikr1.png',
+                    name: "tasnim jawad",
+                    designation: "student",
+                    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuxsod tempor incidunt
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+                },
+                {
+                    image: 'images/flikr2.png',
+                    name: "jawas jamil",
+                    designation: "captain",
+                    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuxsod tempor incidunt
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+                },
+                {
+                    image: 'images/flikr3.png',
+                    name: "abdur rahman",
+                    designation: "cr",
+                    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuxsod tempor incidunt
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+                },
+                {
+                    image: 'images/flikr4.png',
+                    name: "hasnat shohag",
+                    designation: "back bencher",
+                    description: `Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiuxsod tempor incidunt
+                    ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
+                },
+            ]
+        }
+    }
+})
+
+
+// for (const item in student) {
+//     item
+// }

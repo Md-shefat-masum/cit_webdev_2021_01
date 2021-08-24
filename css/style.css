@@ -187,10 +187,10 @@
     margin-bottom: 30px;
 }
 
-#service .service_body {
-    /* border: var(--border); */
+/* #service .service_body {
+    border: var(--border);
 
-}
+} */
 
 #service .service_body:hover {
     cursor: pointer;
@@ -688,16 +688,28 @@ footer .four li img {
 /* slider css */
 .owl-theme .owl-nav {
     margin-top: 10px;
-    position: absolute;
+    /* position: absolute; */
     top: 50%;
     /* background: red; */
     width: 100%;
     display: flex;
     justify-content: space-between;
     font-size: 51px;
-    color: white;
-    transform: translateY(-50%);
+    color: rgb(156, 32, 32);
+    /* transform: translateY(-50%); */
 }
+
+#team .owl-carousel .owl-nav button.owl-prev{
+    position: absolute;
+    left:0;
+    bottom: 200px;
+}
+#team .owl-carousel .owl-nav button.owl-next{
+    position: absolute;
+    right:0;
+    bottom: 200px;
+}
+
 
 .loader {
     border: 16px solid #f3f3f3;
