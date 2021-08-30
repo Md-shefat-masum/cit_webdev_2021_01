@@ -152,17 +152,62 @@ $(function () {
         live: true // default
     })
     wow.init();
+
+    $('.gallery_navs a').on('click', function (e) {
+        e.preventDefault();
+    });
+    const options = {
+        animationDuration: 0.5,
+        callbacks: {
+            onInit: function () {
+                console.log('init');
+            },
+            onFilteringStart: function () {
+                console.log('filtering start');
+            },
+            onFilteringEnd: function () {
+                console.log('filtering end');
+            },
+            onShufflingStart: function () {
+                console.log('filtering shuffle');
+            },
+            onShufflingEnd: function () {
+                console.log('suffle end');
+            },
+            onSortingStart: function () {},
+            onSortingEnd: function () {}
+        },
+        filterOutCss: {
+            opacity: 0,
+            transform: 'scale(0.5)'
+        },
+        filterInCss: {
+            opacity: 1,
+            transform: 'scale(1)'
+        },
+        spinner: { // Configuration for built-in spinner
+            enabled: true,
+            fillColor: '#2184D0',
+            styles: {
+                height: '75px',
+                margin: '0 auto',
+                width: '75px',
+                'z-index': 9999,
+            },
+        },
+    }
+    const filterizr = new Filterizr('.gallery_item', options);
+    // $('.gallery_item').filterizr(options);
 })
 
 var app = new Vue({
     el: '#testimonial',
-    data: function(){
+    data: function () {
         return {
             section_title: 'Hello from testimonial',
             my_name: 'al amin hossain',
             test_image: 'http://127.0.0.1:5500/images/flikr3.png',
-            students: [
-                {
+            students: [{
                     image: 'images/flikr1.png',
                     name: "tasnim jawad",
                     designation: "student",
