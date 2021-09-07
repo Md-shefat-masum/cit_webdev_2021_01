@@ -1,0 +1,59 @@
+.d_btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 20px;
+  border: 1px solid red;
+}
+:root {
+  --content_width: calc(600px - 200px - 60px);
+}
+#card .l_card {
+  border: 1px solid red;
+  width: 600px;
+  border-radius: 5px;
+  margin-top: 50px;
+  transition: all linear 1s;
+  -webkit-transition: all linear 1s;
+  -moz-transition: all linear 1s;
+  -ms-transition: all linear 1s;
+  -o-transition: all linear 1s;
+}
+#card .l_card:hover {
+  background-color: #584461;
+  color: white;
+}
+#card .l_card .l_card_body {
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+#card .l_card .l_card_body .img {
+  width: 600px / 3px;
+}
+#card .l_card .l_card_body .img img {
+  width: 100%;
+}
+#card .l_card .l_card_body .content {
+  width: var(--content_width);
+  padding: 10px;
+}
+#card .l_card .l_card_body .content h4 {
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+#card .l_card .l_card_body .content P {
+  font-family: sans-serif;
+  color: green;
+}
+#card .l_card .l_card_body .content .link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 20px;
+  border: 1px solid red;
+}
+@media (min-width: 320px) and (max-width: 400px) {
+  #card .l_card .l_card_body .content h4 {
+    color: yellow;
+  }
+}

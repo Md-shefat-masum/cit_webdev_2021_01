@@ -1,0 +1,66 @@
+// @import url("../css/component.scss");
+
+:root {
+    --content_width: calc(600px - 200px - 60px);
+}
+
+$card_width: 600px;
+$image_width: $card_width / 3px;
+$content_width: ($card_width - $image_width) - 60px;
+
+#card {
+    .l_card {
+        border: 1px solid red;
+        width: $card_width;
+        border-radius: 5px;
+        margin-top: 50px;
+        // .tr(1s);
+
+        &:hover {
+            background-color: rgb(88, 68, 97);
+            color: white;
+        }
+
+        .l_card_body {
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+
+            .img {
+                width: $image_width;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .content {
+                width: $content_width;
+                // width: calc(600px - 200px - 60px);
+                // width: var(--content_width);
+                padding: 10px;
+
+                h4 {
+                    font-family: sans-serif;
+                    text-transform: uppercase;
+                }
+
+                P {
+                    font-family: sans-serif;
+                    // color: #colors[secondary];
+                }
+
+                .link {
+                    d_btn;
+                }
+
+                @media (min-width: 320px) and (max-width: 400px) {
+                    h4 {
+                        color: yellow;
+                    }
+                }
+            }
+        }
+    }
+}

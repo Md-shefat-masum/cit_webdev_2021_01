@@ -1,0 +1,62 @@
+.d_btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 5px 20px;
+  border: 1px solid red;
+}
+
+:root {
+  --content_width: calc(600px - 200px - 60px);
+}
+
+#card .l_card {
+  border: 1px solid red;
+  width: 600px;
+  border-radius: 5px;
+  margin-top: 50px;
+}
+
+#card .l_card:hover {
+  background-color: #584461;
+  color: white;
+}
+
+#card .l_card .l_card_body {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#card .l_card .l_card_body .img {
+  width: 200;
+}
+
+#card .l_card .l_card_body .img img {
+  width: 100%;
+}
+
+#card .l_card .l_card_body .content {
+  width: 340px;
+  padding: 10px;
+}
+
+#card .l_card .l_card_body .content h4 {
+  font-family: sans-serif;
+  text-transform: uppercase;
+}
+
+#card .l_card .l_card_body .content P {
+  font-family: sans-serif;
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
+  #card .l_card .l_card_body .content h4 {
+    color: yellow;
+  }
+}
+/*# sourceMappingURL=card_s.css.map */

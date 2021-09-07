@@ -1,0 +1,117 @@
+// .l_card {
+//     border: 1px solid red;
+//     width: 600px;
+//     border-radius: 5px;
+//     margin-top: 50px;
+// }
+
+// .l_card .l_card_body {
+//     padding: 15px;
+//     display: flex;
+//     flex-wrap: wrap;
+//     box-sizing: border-box;
+// }
+
+// .l_card .l_card_body .img {
+//     width: 200px;
+// }
+
+// .l_card .l_card_body .img img {
+//     width: 100%;
+// }
+
+// .l_card .l_card_body .content {
+//     width: 345px;
+//     padding: 10px;
+// }
+
+// .l_card .l_card_body .content h4 {
+//     font-family: sans-serif;
+//     text-transform: uppercase;
+// }
+
+// .l_card .l_card_body .content p {
+//     font-family: sans-serif;
+// }
+
+@import "../css/component.less";
+
+:root {
+    --content_width: calc(600px - 200px - 60px);
+}
+
+@card_width: 600px;
+@image_width: @card_width / 3px;
+@content_width: (@card_width - @image_width) - 60px;
+
+.tr(@time) {
+    transition: all linear @time;
+    -webkit-transition: all linear @time;
+    -moz-transition: all linear @time;
+    -ms-transition: all linear @time;
+    -o-transition: all linear @time;
+}
+
+// h5{asdfasdfdas}
+
+#colors() {
+    primary: blue;
+    secondary: green;
+}
+
+#card {
+    .l_card {
+        border: 1px solid red;
+        width: @card_width;
+        border-radius: 5px;
+        margin-top: 50px;
+        .tr(1s);
+
+        &:hover {
+            background-color: rgb(88, 68, 97);
+            color: white;
+        }
+
+        .l_card_body {
+            padding: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            box-sizing: border-box;
+
+            .img {
+                width: @image_width;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .content {
+                // width: @content_width;
+                // width: calc(600px - 200px - 60px);
+                width: var(--content_width);
+                padding: 10px;
+
+                h4 {
+                    font-family: sans-serif;
+                    text-transform: uppercase;
+                }
+
+                P {
+                    font-family: sans-serif;
+                    color: #colors[secondary];
+                }
+
+                .link {
+                    .d_btn;
+                }
+
+                @media (min-width: 320px) and (max-width: 400px) {
+                    h4 {
+                        color: yellow;
+                    }
+                }
+            }
+        }
+    }
+}
