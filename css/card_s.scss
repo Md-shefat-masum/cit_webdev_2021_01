@@ -4,6 +4,13 @@
     --content_width: calc(600px - 200px - 60px);
 }
 
+@mixin reset-list {
+    margin: 20px;
+    padding: 20px;
+    list-style: none;
+    border: 1px solid red;
+}
+
 $card_width: 600px;
 $image_width: $card_width / 3px;
 $content_width: ($card_width - $image_width) - 60px;
@@ -52,7 +59,7 @@ $content_width: ($card_width - $image_width) - 60px;
                 }
 
                 .link {
-                    d_btn;
+                    @include reset-list;
                 }
 
                 @media (min-width: 320px) and (max-width: 400px) {

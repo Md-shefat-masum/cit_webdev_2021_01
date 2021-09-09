@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mobile apps</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="fonts/fontawesome/fontawesome-free-5.15.3-web/css/all.min.css">
+    <link rel="stylesheet" href="css/moblile_view.css">
+    <link rel="stylesheet" href="css/todo.css">
+</head>
+
+<body>
+    <main class="main_body" id="vue_app">
+        <div class="top">
+            <div class="top_content">
+                <div class="left">
+                    <a href="#">
+                        <i class="fas fa-align-left"></i>
+                    </a>
+                </div>
+                <div class="mid">
+                    <form action="#">
+                        <input type="text" placeholder="search">
+                        <button type="button"><i class="fas fa-search"></i></button>
+                    </form>
+                </div>
+                <div class="right">
+                    <img src="images/avatar.jfif" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="app_content_body">
+                <div class="app_content">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>
+                                Todo list {{ todo_list.length }}
+                            </h5>
+                        </div>
+                        <div class="card-body">
+                            <form class="d-flex justify-content-between" action="" @submit.prevent="add_new_data">
+                                <input type="text" v-model="todo_title" class="form-control w-75 mb-0 d-inline-block"
+                                    placeholder="title">
+                                <button type="submit" class="btn btn-info"> Add</button>
+                            </form>
+                            <ul class="todo_list_items">
+                                <li v-for="(item,i) in todo_list">
+                                    <div class="d-flex justify-content-between">
+                                        <label :for="'one'+i">
+                                            <div v-if="item.checked == true">
+                                                <input :id="'one'+i" @click="item.checked = !item.checked" checked
+                                                    type="checkbox" class="custom-control-input">
+                                            </div>
+                                            <div v-else>
+                                                <input :id="'one'+i" @click="item.checked = !item.checked"
+                                                    type="checkbox" class="custom-control-input">
+                                            </div>
+
+                                            <div v-if="item.checked == true">
+                                                <del>{{ item.title }}</del>
+                                            </div>
+                                            <div v-else>
+                                                {{ item.title }}
+                                            </div>
+                                        </label>
+                                        <button @click="delete_data(i)">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <ul class="nav_links">
+                <li>
+                    <a href="#" class="nav_items">
+                        <i class="fas fa-baseball-ball"></i>
+                        <span>games</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav_items">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>earnings</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="active nav_items">
+                        <i class="fas fa-home"></i>
+                        <span>home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav_items">
+                        <i class="fas fa-car"></i>
+                        <span>cars</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="nav_items">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js"></script>
+    <script src="js/todo_vue.js"></script>
+</body>
+
+</html>
