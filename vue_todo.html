@@ -18,9 +18,13 @@
         <div class="top">
             <div class="top_content">
                 <div class="left">
-                    <a href="#">
+                    <a href="#" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop"
+                        aria-controls="offcanvasWithBackdrop">
                         <i class="fas fa-align-left"></i>
                     </a>
+                    <!-- <a href="#" id="show_nav">
+                        <i class="fas fa-align-left"></i>
+                    </a> -->
                 </div>
                 <div class="mid">
                     <form action="#">
@@ -31,11 +35,37 @@
                 <div class="right">
                     <img src="images/avatar.jfif" alt="" srcset="">
                 </div>
+
+
+
+                <!-- <div id="nav-bg">
+                    <div class="nav_overlay" id="nav_overlay"></div>
+                    <div class="nav_list">
+                        <i id="close_btn" class="fas fa-times"></i>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-user"></i>Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-home"></i>Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-gem"></i>Settings
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div> -->
             </div>
         </div>
         <div class="content">
             <div class="app_content_body">
-                <div class="app_content">
+                <!-- <div class="app_content">
                     <div class="card">
                         <div class="card-header">
                             <h5>
@@ -52,16 +82,16 @@
                                 <li v-for="(item,i) in todo_list">
                                     <div class="d-flex justify-content-between">
                                         <label :for="'one'+i">
-                                            <div v-if="item.checked == true">
-                                                <input :id="'one'+i" @click="item.checked = !item.checked" checked
+                                            <div v-if="item.completed == true">
+                                                <input :id="'one'+i" @click="item.completed = !item.completed" checked
                                                     type="checkbox" class="custom-control-input">
                                             </div>
                                             <div v-else>
-                                                <input :id="'one'+i" @click="item.checked = !item.checked"
+                                                <input :id="'one'+i" @click="item.completed = !item.completed"
                                                     type="checkbox" class="custom-control-input">
                                             </div>
 
-                                            <div v-if="item.checked == true">
+                                            <div v-if="item.completed == true">
                                                 <del>{{ item.title }}</del>
                                             </div>
                                             <div v-else>
@@ -75,6 +105,15 @@
                                 </li>
                             </ul>
                         </div>
+                    </div>
+                </div> -->
+                <div class="app_content p-2">
+                    <!-- <div class="row" id="card_list">
+                        
+                    </div> -->
+
+                    <div id="test_vue">
+                        {{ name }}
                     </div>
                 </div>
             </div>
@@ -113,8 +152,22 @@
                 </li>
             </ul>
         </div>
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop"
+            aria-labelledby="offcanvasWithBackdropLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Offcanvas with backdrop</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p>.....</p>
+            </div>
+        </div>
     </main>
 
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js"></script>
     <script src="js/todo_vue.js"></script>
 </body>
